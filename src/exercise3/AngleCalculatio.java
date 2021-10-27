@@ -8,8 +8,7 @@ public class AngleCalculation {
         Scanner input = new Scanner(System.in);
 
         double value;
-        char type; // r or double
-
+        char type;
         do {
           value = input.nextDouble();
           type = input.next().charAt(0);
@@ -17,12 +16,13 @@ public class AngleCalculation {
           if (type == 'r') {
             double convertedValue = value / Math.PI * 180;
             System.out.println("Angle: " + convertedValue + "d");
-          } else if (type == 'd') {
+
+          }else if (type == 'd') {
             double convertedValue = value * Math.PI / 180;
             System.out.println("Angle: " + convertedValue + "r");
           }
 
-        }while (type == 'r' || type == 'd');
+        } while (type == 'r' || type == 'd' );
     }
 
 }
